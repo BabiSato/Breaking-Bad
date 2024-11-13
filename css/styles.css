@@ -1,0 +1,207 @@
+:root {
+    --fonte-principal: 'Inter', sans-serif;
+    --fundo-amarelo: #f4d03f;
+    --fundo-preto: #000000;
+    --fundo-branco: #ffffff;
+    --text: #ffffff;
+    --text2: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--fundo-branco);
+    color: var(--fundo-preto);
+}
+
+/* Cabeçalho */
+header {
+    position: relative;
+
+    & nav{
+        background-color: var(--fundo-amarelo);
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+    }
+    & nav a{
+        color: var(--fundo-preto);
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+    & nav a:hover{
+        color: var(--fundo-branco);
+    }
+    & img{
+        width: 100%;
+        height: auto;
+        max-height: 500px;
+    }
+}
+
+
+/* Sinopse */
+.sinopse {
+    padding: 40px 20px;
+
+    & h2{
+        letter-spacing: 5px;
+        margin-bottom: 20px;
+        color: var(--fundo-preto);
+    }
+    & p{
+        margin-bottom: 20px;
+        line-height: 1.6;
+        color: var(--fundo-preto);
+    }
+}
+
+
+/* Sucesso de Audiência */
+.sucesso-audiencia {
+    background-color: var(--fundo-amarelo);
+    padding: 40px 20px;
+
+    & h2{
+        margin-bottom: 20px;
+        color: var(--fundo-preto);
+    }
+}
+
+.audiencia-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+    color: var(--fundo-preto);
+
+    & p{
+        line-height: 1.6;
+    }
+}
+
+/* Saiba Mais */
+.saiba-mais {
+    position: relative;
+    background-image: url('../imagens/cartoon-breaking-bad-walter-9tng3z9qby0hppi6.jpg');
+    background-size: cover;
+    background-position: center;
+    pad: 4rem 2rem;
+    color: var(--text);
+    height: 950px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & h2{
+        letter-spacing: 5px;
+        margin-bottom: 20px;
+    }
+    & p{
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+    & overlay{
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 2rem;
+        border-radius: 5px;
+        text-align: center;
+        max-width: 600px;
+    }
+}
+
+/* Episódios */
+.episodios {
+    padding: 40px 20px;
+    background-color: var(--fundo-branco);
+    color: var(--text);
+
+    & h2{
+        letter-spacing: 5px;
+        margin-bottom: 20px;
+        color: var(--text);
+    }
+}
+
+.episodio {
+    display: flex;
+    flex-direction: row; /* Imagem à esquerda e texto à direita por padrão */
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    color: var(--text2);
+    justify-content: center;
+
+    & img {
+        width: 40%;
+        max-width: 400px;
+        border-radius: 5px;
+    }
+    & div {
+        width: 60%;
+        line-height: 1.6;
+    }
+}
+/* Quando a classe 'reverse' for aplicada, inverte a ordem */
+.episodio.reverse {
+    flex-direction: row-reverse; /* Imagem à direita e texto à esquerda */
+}
+
+@media (max-width: 768px) {
+    /* Para dispositivos menores, exibe as imagens e textos empilhados */
+    .episodio {
+        flex-direction: column;
+        text-align: left;
+    }
+    .episodio img {
+        width: 80%;
+        margin: 10px 0;
+    }
+    .episodio div {
+        width: 100%;
+    }
+}
+
+#logo{
+    width: 1600px;
+    height:auto;
+}
+
+/* Curiosidade */
+.curiosidade {
+    padding: 40px 20px;
+    background-color: var(--fundo-branco);
+
+    & h2{
+        letter-spacing: 5px;
+        margin-bottom: 20px;
+        color: var(--fundo-preto);
+    }
+    & p{
+        line-height: 1.6;
+        color: var(--fundo-preto);
+    }
+}
+
+
+/*Rodapé*/
+footer#rodape {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+    
+#test {
+    width: 100px;
+    height: auto;
+}
